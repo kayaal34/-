@@ -1,0 +1,86 @@
+The classes are defined in the following .cs files:
+
+Player.cs
+Spaceship.cs
+Bullet.cs
+Enemy.cs
+Planet.cs
+Trap.cs
+Element.cs
+
+Classes of the game:
+
+Player
+Fields:
+score (int): stores the current score of the player.
+spaceship (Spaceship): stores the player's spaceship object.
+Methods:
+MoveSpaceship(): moves the player's spaceship according to the keyboard input.
+Shoot(): allows the player's spaceship to shoot at enemies.
+CollectElement(): adds points to the player's score when an element is collected.
+
+
+Spaceship
+Fields:
+position (Vector2): stores the current position of the spaceship.
+speed (float): stores the speed of the spaceship.
+health (int): stores the current health of the spaceship.
+damage (int): stores the damage dealt by the spaceship.
+sprite (Sprite): stores the sprite of the spaceship.
+Methods:
+Move(): moves the spaceship according to its current speed and direction.
+TakeDamage(): reduces the health of the spaceship by a certain amount.
+Shoot(): creates a bullet object and fires it in the direction of the spaceship's facing.
+
+
+Bullet
+Fields:
+position (Vector2): stores the current position of the bullet.
+speed (float): stores the speed of the bullet.
+damage (int): stores the damage dealt by the bullet.
+sprite (Sprite): stores the sprite of the bullet.
+Methods:
+Move(): moves the bullet according to its current speed and direction.
+
+
+Enemy
+Fields:
+position (Vector2): stores the current position of the enemy.
+speed (float): stores the speed of the enemy.
+health (int): stores the current health of the enemy.
+damage (int): stores the damage dealt by the enemy.
+sprite (Sprite): stores the sprite of the enemy.
+Methods:
+Move(): moves the enemy according to its current speed and direction.
+TakeDamage(): reduces the health of the enemy by a certain amount.
+
+
+Planet
+Fields:
+position (Vector2): stores the current position of the planet.
+sprite (Sprite): stores the sprite of the planet.
+traps (List<Trap>): stores a list of traps on the planet.
+specialElement (Element): stores the special element on the planet.
+Methods:
+GenerateTraps(): generates a list of traps on the planet.
+GenerateSpecialElement(): generates a special element on the planet."
+    
+    
+Trap
+Fields:
+position (Vector2): stores the current position of the trap.
+sprite (Sprite): stores the sprite of the trap.
+damage (int): stores the damage dealt by the trap.
+Methods:
+ApplyDamage(): deals damage to the player's spaceship if it collides with the trap.
+    
+    
+Element
+Fields:
+position (Vector2): stores the current position of the element.
+sprite (Sprite): stores the sprite of the element.
+Methods:
+Collect(): adds points to the player's score when the element is collected.
+    
+
+
